@@ -1,0 +1,78 @@
+
+#giraffe {
+    position: absolute;
+    width: 700px;
+    height: 800px;
+    top: 10px;
+    left: 100px;
+    clip-path: polygon(43% 0, 92% 0, 64% 100%, 14% 100%);
+
+}
+#ant {
+    position: absolute;
+    width: 50px;
+    top: 745px;
+    left: 1200px;
+}
+#panda {
+    position: absolute;
+    width: 300px;
+    top: 520px;
+    left: 400px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    height: calc(100vh - 40px); 
+    position: relative;
+}
+.scroll-container2 {
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    width: 100%;
+    height: calc(100vh - 60px); 
+    position: relative;
+}
+.scroll-container3 {
+    width: 30%;
+    height: calc(100vh - 60px);
+}
+
+.tree {
+    height: 400vh;
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+    
+}
