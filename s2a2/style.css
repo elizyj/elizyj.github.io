@@ -1,0 +1,102 @@
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("background.jpeg");
+}
+h1 {
+    color: black;
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Ensure the heading takes up full width for proper centering */
+    position: absolute; /* Position the element absolutely within the relative parent */
+    top: 0; /* Align the top of the element with the top of its container */
+    left: 0;
+
+}
+
+#walterwhite {
+    position: absolute;
+    height: 70px;
+    top: 21vh;
+    left: 96vw;
+}
+
+#woof {
+    position: absolute;
+    height: 40px;
+    top: 70vh;
+    left: 61vw;
+}
+
+#waldo {
+    position: absolute;
+    height: 95px;
+    top: 26vh;
+    left: 10vw;
+}
+
+
+@media (max-width: 1380px) {
+    #walterwhite {
+        display: none;
+    }
+}
+@media (max-width: 1250px) {
+    #woof {
+        display: none;
+    }
+}
+@media (max-width: 1380px) {
+    #walterwhite {
+        display: none;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+  }
+
+  #woof:hover, #walterwhite:hover, #waldo:hover {
+    animation: shake 0.5s; /* Apply the 'shake' animation when hovered */
+    animation-iteration-count: infinite; /* Make the shake loop continuously while hovering */
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling to keep the effect consistent */
+}
+
+#mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 100px, black 100px);
+    pointer-events: none; 
+    mix-blend-mode: darken;
+}
+#hoverText {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem; /* Adjust size as needed */
+    pointer-events: none; /* Ensures the text doesn't interfere with clicking */
+    z-index: 10; /* Make sure it's above other items */
+    text-align: center; /* Ensure text is centered */
+    display: none; /* Start hidden */
+}
+
+

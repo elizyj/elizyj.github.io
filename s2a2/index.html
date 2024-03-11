@@ -1,0 +1,41 @@
+<head> 
+    <title>Where's Waldo?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Where's Waldo?</h1>
+    <img src="woof.png" id="woof" alt="That's Woof.">
+<img src="Walterwhite.webp" id="walterwhite" alt="That's Walter White....">
+<img src="waldo.webp" id="waldo" alt="You found Waldo!">
+        
+        <div id="mask"></div>
+        <script>
+            
+            const mask = document.getElementById('mask');
+            
+    
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                mask.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 100px, rgba(0, 0, 0, 0.5) 150px, black 160px)`;
+            });
+        </script>
+
+
+        <div id="hoverText" class="hidden">Hover text goes here</div>
+        <script>
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('mouseenter', (e) => {
+                    const hoverText = document.getElementById('hoverText');
+                    hoverText.textContent = e.target.alt; // Set text to the image's alt attribute
+                    hoverText.style.display = 'block'; // Show text immediately
+                });
+                img.addEventListener('mouseleave', () => {
+                    const hoverText = document.getElementById('hoverText');
+                    hoverText.style.display = 'none'; // Hide text immediately
+                });
+            });
+        </script>
+</body>
+
