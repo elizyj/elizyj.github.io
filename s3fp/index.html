@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirrored Drawing Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="controls">
+            <button class = "button" id="btnVertical">Toggle Vertical Mirror</button>
+            <button class = "button"id="btnHorizontal">Toggle Horizontal Mirror</button>
+            <button class = "button"id="btnDiagonal1">Toggle Diagonal 1 Mirror</button>
+            <button class = "button"id="btnDiagonal2">Toggle Diagonal 2 Mirror</button>
+            <button class = "button"id="btnClear">Clear Canvas</button>
+            <input type="color" id="colorPicker">
+            <label for="lineWeight">Line Weight:</label>
+            <input type="range" id="lineWeight" min="1" max="10" value="3">
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
