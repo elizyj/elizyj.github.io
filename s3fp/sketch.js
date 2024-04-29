@@ -47,7 +47,7 @@ function drawLine(x, y, px, py) {
     if (mirrors.vertical) img.line(width - x, y, width - px, py); // Vertical mirror
     if (mirrors.horizontal) img.line(x, height - y, px, height - py); // Horizontal mirror
     if (mirrors.diagonal1) img.line(width - x, height - y, width - px, height - py); // Diagonal 1 mirror
-    if (mirrors.diagonal2) img.line(y, x, py, px); // Diagonal 2 mirror
+    //if (mirrors.diagonal2) img.line(y, x, py, px); // Diagonal 2 mirror
 }
 
 function clearCanvas() {
